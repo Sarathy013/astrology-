@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <title>ஜோதிடம் - Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0340;
+      padding: 20px;
+    }
+    .form-container {
+      background: rgb(194, 198, 205);
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid black;
+    }
+    h2 {
+      text-align: center;
+      color: rgb(224, 67, 67);
+      font-size: large;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    h3{
+      text-align: center;
+      color: #2a0ea3;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #000;
+      padding: 8px;
+      font-size: 16px;
+    }
+    input {
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      padding: 5px;
+    }
+    .no-border {
+      border: none;
+    }
+    h4 {
+      text-align: left;
+      color: #bd1b1b;
+      margin: 10px 0;
+    }
+    .cell {
+      text-align: right;
+      color: #bd1b1b;
+      font-weight: bold;
+      margin-top: 20px;
+    
+    }
+    hr {
+      border: 1px solid #35408f;
+      margin: 5px 0;
+      color: #46bd1b;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  
+
+<div class="form-container" id="form">
+  <img src="shalu.png" alt="Logo" style="display: block; margin: 0 auto; width: 150px; height: auto;">
+  <h2>வாஸை ஹனுமான் ஜோதிட நிலையம்</h2>
+  <h3> ப.எண் 193/6 பு.எண் 112/6 , சோலையப்பன் தெரு,</h3>  
+  <h3> பழய வண்ணாரப்பேட்டை , சென்னை-600 021.</h3>
+  <h4 class="cell">தொடர்பு எண் : 9444204163</h4>
+  <h4>வருகை நேரம் :</h4>
+    <h4>காலை 10:30-மதியம் 2:00</h4>
+    <h4> மாலை 3:00-மாலை 6:30</h4>
+    <hr>
+    <hr>
+
+  <table>
+    <tr>
+      <td>தலைப்பு</td>
+      <td >மணமகன் </td> <td>மணமகள்</td>
+    </tr>
+    <tr>
+      <td>பெயர்</td><td><input type="text" /></td> <td><input type="text"/></td>
+     </tr>
+       <tr>
+        <td>நட்சத்திரம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+      </tr>
+
+     <tr>
+      <td>தினம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+           
+    </tr>
+   
+   
+    <tr>
+       <td>கணம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+    </tr>
+     <tr>
+      <td>மகேந்திரம் </td><td><input type="text" /></td> <td><input type="text"/></td>
+    </tr>
+    
+    <tr>
+      <td>ஸ்திரீதீர்கம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+      </tr>
+         <tr>
+      <td>யோனி</td><td><input type="text" /></td> <td><input type="text"/></td>
+      </tr>
+    
+
+  
+    <tr>
+      
+      <td>இராசி</td><td><input type="text" /></td> <td><input type="text"/></td>
+    </tr>
+    <tr>
+      <td>இராசி அதிபதி</td><td><input type="text" /></td> <td><input type="text"/></td>
+      
+    </tr>
+    <tr>
+      <td>வசியம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+    </tr>
+    <tr>
+      <td>ரஜ்ஜி </td><td><input type="text" /></td> <td><input type="text"/></td>
+      
+    </tr>
+    <tr>
+      <td>நாடி</td><td><input type="text" /></td> <td><input type="text"/></td>
+    </tr>
+    <tr>
+      <td>வேதை</td><td><input type="text" /></td> <td><input type="text"/></td>
+      
+    </tr>
+      <tr>
+      <td>ஜாதி</td><td><input type="text" /></td> <td><input type="text"/></td>
+    
+    <tr>
+      <td>மொத்தம்</td><td><input type="text" /></td> <td><input type="text"/></td>
+    
+  
+      
+  </table>
+
+
+    
+<hr>
+<hr>
+
+
+  <button onclick="downloadPDF()">PDF ஆக சேமிக்க</button>
+</div>
+
+<!-- JS to export PDF -->
+<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script>
+  function downloadPDF() {
+    const element = document.getElementById('form');
+    html2pdf().from(element).save('jothidam_form_table.pdf');
+  }
+</script>
+
+</body>
+</html>
